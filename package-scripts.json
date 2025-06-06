@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production node dist/server/index.js",
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "test": "echo \"No tests specified\" && exit 0",
+    "docker:build": "docker build -t chatportugal .",
+    "docker:run": "docker run -p 5000:5000 --env-file .env chatportugal",
+    "docker:compose": "docker-compose up -d",
+    "docker:logs": "docker-compose logs -f",
+    "docker:stop": "docker-compose down"
+  }
+}
