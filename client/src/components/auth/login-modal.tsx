@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { loginSchema, type LoginData } from "@/shared-types";
+import { loginSchema, type LoginData } from "../../../shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/contexts/auth-context";
 
